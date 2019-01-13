@@ -1,0 +1,40 @@
+extends ./../layout
+block content
+  h1 usuarios
+  P 
+    a(href="/app/programmers/create") crear nuevo personaje
+  -if(programmers.length > 0)
+    table
+      thead 
+        tr
+          th Nombre 
+          th Apellido
+          th usuario
+          th Edad
+          th Genero
+          th
+
+
+
+          tbody
+      -each item in programmers
+        tr 
+          td #{item.nombre}
+          td #{item.apellido}
+          td #{item.user}
+          td #{item.edad}
+          td #{item.genero}
+          td 
+            a.btn-floating.blue.darken-3(href="/app/programmers/#{item._id}") 
+              i.large.material-icons remove_red_eye
+          td
+            a.btn-floating.blue.darken-3(href="/app/programmers/#{item._id}/edit")
+              i.large.material-icons mode_edit
+          td
+            form(method="post", action="/app/programmers/delete/#{item._id}")
+              a.btn-floating.blue.darken-3(href="javascript:void(0);", onclick="if(confirm('¿esta seguro que desea eliminar este registro')){this.parentNode.submit();}") 
+                i.large.material-icons clear
+
+  -else
+    p NO existen Programmers creados
+

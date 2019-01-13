@@ -1,0 +1,16 @@
+extends layout
+block content
+	center
+		div.container
+			div.row
+				div.col.s12.m7
+					div.card.white
+						div.card-content.green-text
+							h3 Iniciar sesion
+							form(method="post", action="/session")
+								input(type="text", name="user", placeholder="Usuario" required="required")
+								br
+								input(type="password", name="pass", placeholder="contraseña" required="required")
+								br
+								input.waves-effect.waves-light.btn-large.blue.darken-3(type='submit', value="Entrar")
+								input.waves-effect.waves-light.btn-large.blue.darken-3(type='button',onclick="location='/app/programmers/create'" , value="Registrarse")

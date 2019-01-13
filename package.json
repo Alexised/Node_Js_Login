@@ -1,0 +1,22 @@
+{
+  "name": "pdhn",
+  "version": "0.0.1",
+  "description": "pdhn",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no TEST specified \" && exit 1"
+  },
+  "author": "alexis",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-session": "^1.14.2",
+    "jade": "^1.11.0",
+    "materialize-css": "^0.100.2",
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

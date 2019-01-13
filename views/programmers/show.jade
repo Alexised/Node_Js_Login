@@ -1,0 +1,26 @@
+extends ../layout
+block content
+    h1 #{programmers.nombre} #{programmers.apellido}
+    div
+    br
+
+    .row
+        form.col.12(method="post", action="#{action}")
+            .row
+                .input-field.col.s12   
+                    label #{programmers.user}
+                .input-field.col.s6
+                    label #{programmers.email}
+            .row
+                .input-field.col.s12
+                    label #{programmers.edad}
+            .row
+
+            .row
+                  .input-field.col.s12
+                    label #{programmers.informacion}
+    br
+    a(href="/app/programmers/#{programmers._id}/edit")  Editar
+    td
+    br
+    a(href="/programmers") volver atras

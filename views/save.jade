@@ -1,0 +1,40 @@
+extends ../layout
+block content
+    h1 Guardar usuarios
+        .row
+            form.col.12(method="post", action="#{action}")
+                .row
+                    .input-field.col.s6
+                        input(placeholder='Nombre',type="text",name="nombre",required="required",value="#{programmers.nombre}")
+                    .input-field.col.s6
+                        input(placeholder='Apellido',type="text",name="apellido",required="required",value="#{programmers.apellido}")     
+                .row
+                    .input-field.col.s12
+                        input(placeholder='Usuario',type="text",name="user",required="required", value="#{programmers.user}")
+                .row
+                    .input-field.col.s12
+                        input(placeholder='email',type="email",name="email",required="required", value="#{programmers.email}")
+                .row
+                    .input-field.col.s12
+                        input(placeholder='contraseña',type="password",name="pass",required="required", value="#{programmers.pass}")
+                .row
+                    .input-field.col.s12
+                        input(placeholder="edad",type="number",name="edad",required="required", value="#{programmers.edad}")
+                .row
+                    .input-field.col.s12
+                        textarea#textarea1.materialize-textarea(placeholder='informacion',type="text",name="informacion",required="required", value="#{programmers.informacion}")
+                input#test1(name='genero', value='femenino', type='radio')
+                label(for='test1') femenino
+                br
+                input#test2(name='genero', value='masculino', type='radio')
+                label(for='test2') masculino
+                br
+                input.btn.waves-effect.blue.darken-3( type="submit", value="guardar")
+                a.btn.waves-effect.blue.darken-3(href='/app/programmers') Cancelar
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+doctype
+html    
+    head
+        title= title
+        meta(charset="utf-8 ")
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        link(rel="stylesheet", href="css/style.css")
+    body
+         nav
+            div.nav-wrapper.blue.darken-3
+                a(href='#' class="brand-logo") ARS-MUSIC
+                -if(session !='close')
+                    ul(id="nav-mobile" class="right hide-on-med-and-down")
+                        li 
+                            a(href="sass.html") #{user}
+                        li
+                            a(href="/app/close") Cerrar Sesion
+                -else
+                    ul(id="nav-mobile" class="right hide-on-med-and-down")
+                        li
+                            a(href="/app/programmers/create") registrarse
+
+block content
